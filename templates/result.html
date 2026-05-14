@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+
+    <style>
+    body {
+        font-family: Poppins;
+        background: #0f172a;
+        color: white;
+        margin: 0;
+        padding: 40px 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 700px;
+        background: rgba(255,255,255,0.08);
+        padding: 30px;
+        border-radius: 15px;
+
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+
+        line-height: 1.7;
+        overflow-y: auto;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #38bdf8;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #38bdf8;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>✨Translated Result</h2>
+    <pre>{{ result }}</pre>
+
+    <a href="/">⬅ Upload Another</a>
+</div>
+
+</body>
+</html>
