@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Audio Translator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* Navbar */
+
+        nav {
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Main Section */
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 70px);
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .card p {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .file-upload {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            border-radius: 14px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .file-upload:hover {
+            border-color: #38bdf8;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .file-upload input {
+            margin-top: 15px;
+            color: white;
+        }
+
+        input[type="text"] {
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            font-size: 15px;
+        }
+
+        input[type="text"]::placeholder {
+            color: #cbd5e1;
+        }
+
+        .btn {
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: #38bdf8;
+            color: #0f172a;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        @media(max-width: 600px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .card h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+        <div class="logo">AI Translator</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main -->
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Audio Translator</h1>
+
+            <p>
+                Upload your audio file and instantly translate it into any language using AI.
+            </p>
+
+            <form method="post" enctype="multipart/form-data">
+
+                <label class="file-upload">
+                    <div>
+                        📁 Choose Audio File
+                    </div>
+
+                    <input type="file" name="file" required>
+                </label>
+
+                <input 
+                    type="text" 
+                    name="language" 
+                    placeholder="Enter target language (e.g. Bangla, French)"
+                    required
+                >
+
+                <button class="btn" type="submit">
+                    Upload & Translate
+                </button>
+
+            </form>
+
+            <div class="footer-text">
+                Powered by Gemini AI & Diprodip Das
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
